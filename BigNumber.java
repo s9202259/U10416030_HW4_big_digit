@@ -16,6 +16,9 @@ public class BigNumber {
 }
 
 class BigDigit {
+	int bigSize;
+	int smallSize;
+	
 	ArrayList<Integer> array1 = new ArrayList<Integer>();
 	ArrayList<Integer> array2 = new ArrayList<Integer>();
 	ArrayList<Integer> arrayPlus = new ArrayList<Integer>();
@@ -27,12 +30,27 @@ class BigDigit {
 	
 	public void setArray1(String a) {
 		for(int i = a.length() - 1; i >= 0; i--) {
-			array1.add((int)a.charAt(i)- 48);
+			array1.add((int)a.charAt(i));
 		}
 	}
 	public void setArray2(String b) {
 		for(int i = b.length() - 1; i >= 0; i--) {
-			array2.add((int)b.charAt(i)- 48);
+			array2.add((int)b.charAt(i));
 		}		
+	}
+	
+	public void bigSize() {
+		if(array1.size() > array2.size()) {
+			bigSize = array1.size();
+			smallSize = array2.size();
+		}
+		else if(array2.size() > array1.size()) {
+			bigSize = array2.size();
+			smallSize = array1.size();
+		}
+		else {
+			bigSize = array1.size();
+			smallSize = array1.size();
+		}
 	}
 }
