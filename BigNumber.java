@@ -8,8 +8,8 @@ public class BigNumber {
 		Scanner input = new Scanner(System.in);
 		
 		System.out.println("Please enter two number: ");		
-		int number1 = input.nextInt();
-		int number2 = input.nextInt();
+		String number1 = input.next();
+		String number2 = input.next();
 		
 		System.out.println(number1 + " " + number2);
 	}
@@ -20,7 +20,7 @@ class BigDigit {
 	ArrayList<Integer> array2 = new ArrayList<Integer>();
 	ArrayList<Integer> arrayPlus = new ArrayList<Integer>();
 	
-	BigDigit(int a, int b) {
+	BigDigit(String a, String b) {
 		setArray1(a);
 		setArray2(b);
 	}
